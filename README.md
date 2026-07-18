@@ -1,10 +1,10 @@
-# 🤖 AI Agent with Tool-Based Reasoning Using the ReAct Pattern
+# AI Agent with Tool-Based Reasoning Using the ReAct Pattern
 
 A fully functional, command-line AI Agent in Python built around the **ReAct (Reasoning + Acting)** pattern. The agent interacts with external APIs and executes safe math parsing to solve multi-step problems. It supports direct API integration with Google Gemini and OpenAI, as well as an offline simulation mode for local verification.
 
 ---
 
-## 💡 How It Works: The ReAct Pattern
+## How It Works: The ReAct Pattern
 
 The **ReAct (Reasoning + Acting)** pattern combines reasoning (thinking about what to do next) with acting (executing external tools to get feedback/observations). This creates a loop that allows the LLM to complete complex, multi-step tasks sequentially.
 
@@ -63,7 +63,7 @@ Here is a visual overview of how the agent handles a user request:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 - **[agent.py](file:///d:/AI Agent with Tool-Based Reasoning Using the ReAct Pattern/agent.py)**: The main script. Contains:
   - Tool definitions (`get_weather`, `calculate`, `search_wikipedia`) and safe math parsing modules.
@@ -76,7 +76,7 @@ Here is a visual overview of how the agent handles a user request:
 
 ---
 
-## 🛠️ Project Components & Logic Details
+## Project Components & Logic Details
 
 ### 1. Functional Tools
 The agent uses three separate tools, defined in [agent.py](file:///d:/AI Agent with Tool-Based Reasoning Using the ReAct Pattern/agent.py):
@@ -104,7 +104,7 @@ The core execution engine is **[run_agent](file:///d:/AI Agent with Tool-Based R
 
 ---
 
-## 🚀 Setup & Installation Guide
+## Setup & Installation Guide
 
 Follow these steps to set up and run the project:
 
@@ -146,7 +146,7 @@ pip install requests python-dotenv rich
 
 ---
 
-## 🏃 How to Run the Agent
+## How to Run the Agent
 
 You can run the agent in different modes using the command-line interface.
 
@@ -181,13 +181,13 @@ python agent.py --prompt "Who was Ada Lovelace on Wikipedia and what is 12 divid
 
 ---
 
-## 📊 Sample Execution Traces
+## Sample Execution Traces
 
 ### Live Multi-Tool Execution Trace (`New York City` + `5!`)
 When executed with Gemini, the terminal displays the following reasoning structure:
 
 ```text
-┌───────────────────────────── 🚀 Starting Agent ─────────────────────────────┐
+┌─────────────────────────────  Starting Agent   ─────────────────────────────┐
 │ Initializing ReAct Loop using Provider: GEMINI                              │
 │ Prompt: 'What's the weather in New York City, and what is 5 factorial?'     │
 └─────────────────────────────────────────────────────────────────────────────┘
@@ -234,7 +234,7 @@ When executed with Gemini, the terminal displays the following reasoning structu
 ### Safety Stop Execution Trace (`--max-steps 1`)
 If execution steps are exceeded, the agent halts:
 ```text
-┌───────────────────────────── 🚀 Starting Agent ─────────────────────────────┐
+┌─────────────────────────────  Starting Agent   ─────────────────────────────┐
 │ Initializing ReAct Loop using Provider: GEMINI                              │
 │ Prompt: 'What's the weather in New York City, and what is 5 factorial?'     │
 └─────────────────────────────────────────────────────────────────────────────┘
@@ -253,7 +253,7 @@ If execution steps are exceeded, the agent halts:
 │ Wind Speed: 11 km/h                                                         │
 └─────────────────────────────────────────────────────────────────────────────┘
 
-┌───────────────────────────── ⚠️ Execution Stopped ─────────────────────────────┐
+┌───────────────────────────── Execution Stopped ─────────────────────────────┐
 │ Max steps reached without completing the task.                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
